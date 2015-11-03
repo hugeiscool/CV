@@ -1,0 +1,126 @@
+<?php
+session_start();
+$_SESSION['mailEnvoye'] = false;
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dimitri Hugé | Ingénieur en Cognitique (INP Bordeaux)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Réalisé par Dimitri Hugé, ingénieur en Cognitique (INP Bordeaux). Ce site a pour objectif d'apporter des informations complémentaires par rapport à mon CV." />
+<meta name="keywords" content="Cognitique, INP Bordeaux, ENSC, Ergonomie, IHM, Interface, Conception centrée utilisateur, Facteur Humain, Maquettage, Tests utilisateurs, Gestion de projet, Anglais"> 
+<meta name="author" content="http://bootstraptaste.com" />
+<!-- css -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/flexslider.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link rel="icon" type="img/png" href="img/icone_navigateur_cognitique_huge_dimitri.png" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/default.css" rel="stylesheet" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span style="color:#fff; font-weight:800; font-size: 1.4em;"><i class="fa fa-bars"></i> Menu</span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown active inactiveLink"><a href="index.html"><i class="fa fa-home" style="margin-right:8px;"></i>Accueil</a></li>
+                        <li><a href="formation.html"><i class="fa fa-mortar-board" style="margin-right:8px;"></i>Ma formation</a></li>
+                        <li><a href="experience.html"><i class="fa fa-suitcase" style="margin-right:8px"></i>Mon expérience</a></li>
+                        <li><a href="competences.html"><i class="fa fa-cog" style="margin-right:8px"></i>Mes compétences</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<!-- end header -->
+	<section id="content">
+	<div class="container">
+		<!--<div class="row">
+		</div>-->
+		<div class="row">
+			<div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+				<div class="marginbot20"></div>
+				<img src="img/accueil_cerveau_cognitique.jpg" title="" alt="cerveau_cognitique_ensc_dimitri_huge" class="img-responsive align-left" />
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+				<h1 style="font-size:4.8em; font-weight:300;">Dimitri Hugé</h1>
+				<div class="row"></div>
+				<h4 style="font-weight:800;">Ingénieur en Cognitique - INP Bordeaux</h4>
+				<div class="row"></div>
+				<h6 style="font-weight:500">Actuellement en poste chez Cheetah Ad Platform en tant que chef de projet.</h6>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-3 col-lg-4 col-lg-offset-3">
+                            <a href="CV_Dimitri_Huge.pdf" class="btn btn-block btn-lg btn-warning" style="font-weight:bold;margin-bottom: 50px;"><i class="fa fa-file-pdf-o" style="margin-right:10px;font-weight:bold;"> </i>Voir mon CV</a>
+			</div>
+			<div class="col-md-1 col-lg-1"></div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <button type="button" class="btn btn-block btn-warning btn-lg" data-toggle="modal" data-target="#exampleModal" style="font-weight:bold;"><i class="fa fa-envelope" style="margin-right:10px;font-weight:bold;"> </i>Me contacter</button>
+                                
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="exampleModalLabel">Formulaire de contact</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form id="contactform" action="confirmation.php" method="post" class="validateform" name="send-contact">
+                                          <div class="form-group">
+                                            <label class="control-label">Votre nom</label>
+                                            <input type="text" class="form-control" name="name"/>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="control-label">Votre adresse mail (obligatoire)</label>
+                                            <input type="email" class="form-control" name="email" required/>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="control-label">Le sujet de votre message</label>
+                                            <input type="text" class="form-control" name="subject"/>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="control-label">Votre message (obligatoire)</label>
+                                            <textarea rows="5" class="form-control" name="message" required></textarea>
+                                          </div>
+                                            <div class="modal-footer">
+                                        <button type="submit" class="btn btn-lg btn-warning">Envoyer</button>
+                                      </div>
+                                        </form>
+                                       
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
