@@ -71,43 +71,43 @@ $_SESSION['mailEnvoye'] = false;
 			</div>
 			<div class="col-md-1 col-lg-1"></div>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <button type="button" class="btn btn-block btn-warning btn-lg" data-toggle="modal" data-target="#exampleModal" style="font-weight:bold;"><i class="fa fa-envelope" style="margin-right:10px;font-weight:bold;"> </i>Me contacter</button>
-                                
-                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                  <div class="modal-dialog">
-                                    <div class="modal-content">
-                                      <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="exampleModalLabel">Formulaire de contact</h4>
-                                      </div>
-                                      <div class="modal-body">
-                                        <form id="contactform" action="confirmation.php" method="post" class="validateform" name="send-contact">
-                                          <div class="form-group">
-                                            <label class="control-label">Votre nom</label>
-                                            <input type="text" class="form-control" name="name"/>
-                                          </div>
-                                          <div class="form-group">
-                                            <label class="control-label">Votre adresse mail (obligatoire)</label>
-                                            <input type="email" class="form-control" name="email" required/>
-                                          </div>
-                                          <div class="form-group">
-                                            <label class="control-label">Le sujet de votre message</label>
-                                            <input type="text" class="form-control" name="subject"/>
-                                          </div>
-                                          <div class="form-group">
-                                            <label class="control-label">Votre message (obligatoire)</label>
-                                            <textarea rows="5" class="form-control" name="message" required></textarea>
-                                          </div>
-                                            <div class="modal-footer">
-                                        <button type="submit" class="btn btn-lg btn-warning">Envoyer</button>
-                                      </div>
-                                        </form>
-                                       
-                                      </div>
-                                      
-                                    </div>
-                                  </div>
-                                </div>
+        <button type="button" class="btn btn-block btn-warning btn-lg" data-toggle="modal" data-target="#exampleModal" style="font-weight:bold;"><i class="fa fa-envelope" style="margin-right:10px;font-weight:bold;"> </i>Me contacter</button>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Formulaire de contact</h4>
+              </div>
+              <div class="modal-body">
+                <form id="contactform" action="confirmation.php" method="post" class="validateform" name="send-contact">
+                  <div class="form-group">
+                    <label class="control-label">Votre nom</label>
+                    <input type="text" class="form-control" name="name"/>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Votre adresse mail (obligatoire)</label>
+                    <input type="email" class="form-control" name="email" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Le sujet de votre message</label>
+                    <input type="text" class="form-control" name="subject"/>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Votre message (obligatoire)</label>
+                    <textarea rows="5" class="form-control" name="message" required></textarea>
+                  </div>
+                    <div class="modal-footer">
+                <button type="submit" class="btn btn-lg btn-warning">Envoyer</button>
+              </div>
+                </form>
+               
+              </div>
+              
+            </div>
+          </div>
+        </div>
 			</div>
 		</div>
 	</div>
